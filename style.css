@@ -1,0 +1,291 @@
+/**
+Themes and colors are made by: 
+Mark Jason T. Galang
+>Web Developer<
+*/
+/*STYLING*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: linear-gradient(#0F2027, #2C5364);
+	width: auto;
+	height: 1600px;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+.whole{
+	width: 100vw;
+	height: 100vh;
+}
+h1{
+	margin: 50px 100px 0px 100px;
+	color: white;
+	font-size: 4em;
+	text-align: center;
+	letter-spacing: 5px;
+	font-family: Montserrat;
+	font-weight: 600;
+	border-top: 2px solid #083D63;
+	border-bottom: 2px solid #083D63;
+	cursor: pointer;
+}
+#mainCard{
+	width: 320px;
+	height: 460px;
+	border-radius: 20px;
+	background-image: url('backTexture.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	cursor: pointer;
+	animation: cog 1.2s infinite;
+	animation-timing-function: linear;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#mainCard:hover{
+	animation: none;
+	transition: all 1s ease-in-out;
+}
+.cardBox{
+	padding-top: 50px;
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	animation: float 1s infinite;
+	animation-timing-function: linear;
+}
+.cardBox > div{
+	background: rgba(0, 0, 0, 0.5);
+	width: 300px;
+	height: 400px;
+	margin: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 143, 255, 0.870), 0 6px 90px 0 rgba(0, 143, 255, 0.90);
+}
+.cardBox > div:hover{
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	transform: scale(1.1);
+}
+.shine{
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+	position: absolute;
+	left: 27%;
+	animation: spin 0.95s infinite;
+	animation-timing-function: linear;
+}
+#glow{
+	animation: fadeOut 0.9s infinite, slideInFromTop 0.5s infinite;
+	animation-timing-function: linear;
+}
+#glow2{
+	animation: fadeOut 0.9s infinite, slideInFromTop 0.5s infinite;
+	animation-timing-function: linear;
+}
+#glow3{
+	animation: fadeOut 0.9s infinite, slideInFromTop 0.5s infinite;
+	animation-timing-function: linear;
+}
+.miniStars{
+	display: none;
+	margin: 60px;
+}
+.miniStars img{
+	float: left;
+	animation: float 0.5s infinite;
+	animation-timing-function: linear;
+	margin: 2px 2px 50px 2px;
+	box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.2), 0 6px 20px 0 rgba(255,255,255, 0.19);
+}
+.miniStars2{
+	display: none;
+	margin: 60px;
+}
+.miniStars2 img{
+	float: left;
+	animation: float 0.5s infinite;
+	animation-timing-function: linear;
+	margin: 2px 2px 50px 2px;
+	box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.2), 0 6px 20px 0 rgba(255,255,255, 0.19);
+}
+.miniStars3{
+	display: none;
+	margin: 60px;
+}
+.miniStars3 img{
+	float: left;
+	animation: float 0.5s infinite;
+	animation-timing-function: linear;
+	margin: 2px 2px 50px 2px;
+	box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.2), 0 6px 20px 0 rgba(255,255,255, 0.19);
+}
+.firstH{
+	display: none;
+	padding: 40px 0px 10px 0px;
+	text-align: center;
+	color: white;
+	font-family: Montserrat;
+	font-size: 3em;
+}
+.secondH{
+	display: none;
+	padding: 40px 0px 10px 0px;
+	text-align: center;
+	color: white;
+	font-family: Montserrat;
+	font-size: 3em;
+}
+.thirdH{
+	display: none;
+	padding: 40px 0px 10px 0px;
+	text-align: center;
+	color: white;
+	font-family: Montserrat;
+	font-size: 3em;
+}
+button{
+	display: none;
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+	background: linear-gradient(#1E699A, #2980B9);
+	width: 200px;
+	color: white;
+	font-size: 1em;
+	font-family: Montserrat;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*ANIMATIONS*/
+@keyframes cog {
+	100%{
+		-webkit-transform: perspective(900px) rotateY(360deg);
+        transform: perspective(900px) rotateY(360deg );
+	}
+}
+@keyframes float {
+	50% {
+		transform: translate(0, -5px);
+	}
+}
+@keyframes cog2 {
+	0%{
+		transform: perspective(300px) scale(0);
+	}
+	25%{
+		transform: perspective(300px) scale(1);
+	}
+}
+@keyframes cog22 {
+	25%{
+		transform: scale(1);
+	}
+	0%{
+		transform: scale(0.8);
+	}
+}
+@keyframes cog3 {
+	0%{
+		transform: perspective(300px) scale(1);
+	}
+	25%{
+		transform: perspective(300px) scale(0);
+	}
+}
+
+@keyframes spin {
+   100%{ 
+    	transform: scale(2) rotate(-360deg);
+  	}
+  	50%{
+  		opacity: 0;
+  	}
+}
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideInFromTop {
+	0% {
+		transform: translateY(60%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideInFromTop2 {
+	0% {
+		transform: translateY(40%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideInFromTop3 {
+	0% {
+		transform: translateY(30%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes fadeOut{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
+@keyframes stars{
+	100%{
+		transform: scale(1.4);
+	}
+	0%{
+		transform: scale(1);
+	}
+}
+@media only screen and(min-width: 900px){
+	*{
+		transform: scale(0.6);
+	}
+}
